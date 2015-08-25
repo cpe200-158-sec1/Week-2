@@ -42,7 +42,7 @@ namespace Lab202
                         break;
                     }
                 }
-                if( value.Length > 6 )
+                if( value.Length != 6 )
                 {
                     Console.WriteLine("{0}: error try setting invalid CourseID!", this.CourseID);
                 }
