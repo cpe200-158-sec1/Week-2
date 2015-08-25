@@ -1,4 +1,5 @@
 using System;
+using Lab2;
 
 namespace Lab2
 {
