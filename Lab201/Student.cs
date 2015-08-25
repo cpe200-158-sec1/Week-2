@@ -28,7 +28,7 @@
         {
             this.Name = Name;
             this.StudentID = StudentID;
-            this.YearOfBirth = YearOfBirth;
+            this.YearOfBirth = checkyearofbirth_input(YearOfBirth) ;
             isActive = true;
         }
         // Student(Name, StudentID, YearOfBirth, isActive): takes 4 parameters
@@ -36,7 +36,7 @@
         {
             this.Name = Name;
             this.StudentID = StudentID;
-            this.YearOfBirth = YearOfBirth;
+            this.YearOfBirth = checkyearofbirth_input(YearOfBirth);
             this.isActive = isActive;
         }
 
@@ -65,6 +65,13 @@
         }
         // ToString(): display object state in specify format(see expected output)
 
+        private int checkyearofbirth_input(int yearofbirth)
+        {
+            if(yearofbirth <= 1950 || yearofbirth >= 2000)
+            { }
+            else { yearofbirth = 1950; }
+            return yearofbirth;
+        }
 
     }
 }
