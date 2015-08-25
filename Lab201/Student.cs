@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab201
+namespace Lab2
 {
     class Student
     {
@@ -55,17 +55,14 @@ namespace Lab201
             {
                 if (value >= 1950 || value < 2000)
                 {
-                    throw new OverflowException();
+                    Console.WriteLine("{0}: error try setting invalid year-of-birth value!", _studentid);                }
                 }
-
-                _year = year;
-            }
         }
         public bool isActive
         {
             get
             {
-                _isActive = isActive;
+                return _isActive;
             }
             set
             {
@@ -81,8 +78,8 @@ namespace Lab201
         }
         public Student()
         { 
-            _Name=Jonh Doe;
-            _age = 20;
+            _Name="Jonh Doe";
+            _age = 1995;
 
         }
         public Student(string name,string studentid)
@@ -105,7 +102,7 @@ namespace Lab201
         }
         public override string ToString()
         {
-            string s = "[Student:" + name + "(" + studentid + "),age=" + getage + ",";
+            string s = "[Student:" + name + "(" + studentid + "),age=" + getage() + ",";
 
             if (isActive)
             {
@@ -113,7 +110,7 @@ namespace Lab201
             }
             else
             {
-                s += "NoT active student";];
+                s += "NoT active student]";
             }
 
             return s;
