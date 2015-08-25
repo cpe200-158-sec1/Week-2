@@ -16,6 +16,7 @@ namespace Lab2
 			stds[5] = new Student ("s5","57005",1993);
 			stds[6] = new Student ("s6","57006");
 
+
 			Console.WriteLine ("\n--- Initial Students' state ---");
 			foreach (Student s in stds)
 				Console.WriteLine (s);
