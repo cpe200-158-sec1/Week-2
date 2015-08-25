@@ -22,7 +22,7 @@ namespace Lab2
         public int _YearOfBirth
         {
             get { return YearOfBirth; }
-            set { if (value > 2000 || value < 1950) Console.WriteLine("{0}: error try setting invalid year-of-birth value!", id); }
+            set { if (value > 2000 || value < 1950) Console.WriteLine("{0}: error try setting invalid year-of-birth value!", id); else YearOfBirth = value; }
         }
         public bool _isActive
         {
@@ -33,7 +33,6 @@ namespace Lab2
         //constructor
         public Student()
         {
-
             Name = "John Doe";
             id = "UNKNOW";
             YearOfBirth = 1995;
