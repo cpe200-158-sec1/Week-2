@@ -4,7 +4,6 @@ namespace Lab2
 {
     class Student
     {
-
         private string _Name;
         private int _YearOfBirth;
         private string _Studentid;
