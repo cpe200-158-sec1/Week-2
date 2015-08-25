@@ -19,7 +19,7 @@ namespace Lab2
         public int YearOfBirth
         {
             get { return _YearOfBirth; }
-            set { if (value < 1950 || value > 2000) Console.WriteLine("{0}: error try setting invalid year-of-birth value!",_Studentid); else _YearOfBirth = value; }
+            set { if (value < 1950 || value > 2000) Console.WriteLine("{0}: error try setting invalid year-of-birth value!", _Studentid); }
         }
 
         public string Studentid
@@ -73,7 +73,7 @@ namespace Lab2
 
         public override string ToString()
         {
-            return string.Format("[Student: {0} ({1}), {2}, {3}", _Name, _Studentid, _YearOfBirth, (_isActive) ? "is active student" : "is NOT active student");
+            return string.Format("[Student: {0} ({1}), {2}, {3}", _Name, _Studentid, getAge(), (_isActive) ? "is active student]" : "is NOT active student]");
         }
 
     }
