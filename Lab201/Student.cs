@@ -57,7 +57,7 @@ namespace Lab2
         {
             Name = "John Doe";
             StudentID = "Unknow";
-            YearOfBirth = 1950;
+            this._yearofbirth = 1995;
             isActive = false;
         }
         // Student(Name, StudentID) : takes 2 parameters
@@ -65,7 +65,7 @@ namespace Lab2
         {
             this.Name = Name;
             this.StudentID = StudentID;
-            YearOfBirth = 1950;
+            this._yearofbirth = 1995;
             isActive = true;
         }
         // Student(Name, StudentID, YearOfBirth): takes 3 parameters
@@ -73,7 +73,7 @@ namespace Lab2
         {
             this.Name = Name;
             this.StudentID = StudentID;
-            this.YearOfBirth = checkyearofbirth_input(YearOfBirth) ;
+            this.YearOfBirth = YearOfBirth;
             isActive = true;
         }
         // Student(Name, StudentID, YearOfBirth, isActive): takes 4 parameters
@@ -81,7 +81,7 @@ namespace Lab2
         {
             this.Name = Name;
             this.StudentID = StudentID;
-            this.YearOfBirth = checkyearofbirth_input(YearOfBirth);
+            this.YearOfBirth = YearOfBirth;
             this.isActive = isActive;
         }
 
@@ -90,7 +90,7 @@ namespace Lab2
         {
             int age;
 
-            age = 2015 - YearOfBirth;
+            age = 2015 - _yearofbirth;
 
             return age;
         }
@@ -110,13 +110,7 @@ namespace Lab2
         }
         // ToString(): display object state in specify format(see expected output)
 
-        private int checkyearofbirth_input(int yearofbirth)
-        {
-            if(yearofbirth <= 1950 || yearofbirth >= 2000)
-            { }
-            else { yearofbirth = 1950; }
-            return yearofbirth;
-        }
+
 
     }
 }
