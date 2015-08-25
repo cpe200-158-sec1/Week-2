@@ -22,11 +22,11 @@ namespace Lab2
 
 			Console.WriteLine ("\n--- Playing with s4, s5, s6 objects ---");
 			stds [4].Name = "Mario";
-			stds [5].YearOfBirth = 1900;
+			stds [5]._YearOfBirth = 1900;
 			stds [6].isActive = false;
 			for (int i = 4; i < stds.Length; i++)
 				Console.WriteLine (stds [i]);
-
+            Console.ReadKey();
 		}
 	}
 }
