@@ -1,5 +1,5 @@
 using System;
-
+using Lab202
 namespace Lab2
 {
 	class MainClass
