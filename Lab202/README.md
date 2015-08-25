@@ -16,6 +16,7 @@ Creates Course class in a separate file, e.g. "Course.cs", and implements it to 
 
 # Testing your class:
 
+
 After you finish your "Course class", you can test your class with the provided "Program.cs" file.
 The result should be similar to the output given as follows:
 
