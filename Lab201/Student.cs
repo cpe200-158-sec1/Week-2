@@ -1,4 +1,6 @@
-﻿namespace Lab2
+﻿using System;
+
+namespace Lab2
 {
     class Student
     {
@@ -27,7 +29,7 @@
             set;
 
         }
-
+        
 
         public int YearOfBirth
         {
@@ -39,7 +41,7 @@
             {
                 if(value < 1950 || value > 2000)
                 {
-                    _yearofbirth = 1950;
+                    Console.WriteLine(this.StudentID+ ": error try setting invalid year-of-birth value!");
                 }
                 else
                 {
