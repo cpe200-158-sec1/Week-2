@@ -18,7 +18,7 @@ namespace Lab2
         public int YearOfBirth
         {
             get { return _YearOfBirth; }
-            set { if (value < 1950 || value > 2000) Console.WriteLine("{0}: error try setting invalid year-of-birth value!",_Studentid); else _YearOfBirth = value; }
+            set { if (value < 1950 || value > 2000) Console.WriteLine("{0}: error try setting invalid year-of-birth value!",_Studentid);  else _YearOfBirth = value; }
         }
 
         public string Studentid
