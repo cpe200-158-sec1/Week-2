@@ -2,10 +2,53 @@
 {
     class Student
     {
+  
 
-        public string Name, StudentID;
-        public int YearOfBirth; // YearOfBirth(from 1950 to 2000)
-        public bool isActive;
+      
+        public int _yearofbirth; // Yepublic bool isActive;
+
+        public string Name
+        {
+            get;
+            set;
+
+        }
+
+        public string StudentID
+        {
+            get;
+            set;
+
+        }
+
+        public bool isActive
+        {
+            get;
+            set;
+
+        }
+
+
+        public int YearOfBirth
+        {
+            get
+            {
+                return _yearofbirth;
+            }
+            set
+            {
+                if(value < 1950 || value > 2000)
+                {
+                    _yearofbirth = 1950;
+                }
+                else
+                {
+                    _yearofbirth = value;
+                }
+            }
+
+        }
+
 
         //1
         public Student()
