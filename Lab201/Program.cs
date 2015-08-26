@@ -1,4 +1,5 @@
 using System;
+using Lab201;
 
 namespace Lab2
 {
@@ -6,8 +7,8 @@ namespace Lab2
 	{
 		public static void Main (string[] args)
 		{
-			/* Testing the Student class */
-			Student[] stds = new Student[7];
+            /* Testing the Student class */
+            Student[] stds = new Student[7];
 			stds[0] = new Student ();
 			stds[1] = new Student ("s1","57001");
 			stds[2] = new Student ("s2","57002",1994);
@@ -26,7 +27,9 @@ namespace Lab2
 			stds [6].isActive = false;
 			for (int i = 4; i < stds.Length; i++)
 				Console.WriteLine (stds [i]);
-
+            
+            Console.ReadKey();
+             
 		}
 	}
 }
