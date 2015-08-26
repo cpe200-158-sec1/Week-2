@@ -21,8 +21,8 @@ namespace Lab202
         }
         public Course()
         {
-            _Name = "";
-            _CourseID = "";
+            _Name = "Unknown";
+            _CourseID = "000000";
             _Lecturer = "staff";
             _MaxStudents = 30;
             _NumStudents = 0;
@@ -30,7 +30,7 @@ namespace Lab202
         public Course(String Name)
         {
             _Name = Name;
-            _CourseID = "";
+            _CourseID = "000000";
             _Lecturer = "staff";
             _MaxStudents = 30;
             _NumStudents = 0;
