@@ -16,7 +16,6 @@ namespace Lab2
 			Console.WriteLine (cpe200);
 			Console.WriteLine (isne103);
 			Console.WriteLine (cpe453);
-            Console.WriteLine(test);
 
 			/* playing with cpe200 object */
 			Console.WriteLine ("\n--- playing with cpe200 object ---");
