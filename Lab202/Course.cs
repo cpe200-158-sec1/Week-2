@@ -49,20 +49,13 @@ namespace Lab202
 
         public override string ToString()
         {
-            string s = "[Course: " + Name + " (" + CourseID + "), Lecturer=" + Lecturer + ", has " + NumStudents + " students, max=" + MaxStudents + "]";
-            return s;
+            return string.Format("[Course: {0} ({1}), Lecturer={2}, has {3} students, max={4}]", Name, CourseID, Lecturer, NumStudents, MaxStudents);
         }
 
         public string Name
         {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
+            get;
+            set;
         }
         public string CourseID
         {
@@ -78,13 +71,8 @@ namespace Lab202
                 }
                 else
                 {
-                    bool isNumeric = true;
-                    for (int i = 0; i != value.Length; i++)
-                    {
-                        int thatnumber;
-                        isNumeric = int.TryParse(value, out thatnumber);
-                        if (!isNumeric) break;
-                    }
+                    int thatnumber;
+                    bool isNumeric = int.TryParse(value, out thatnumber);
                     if (isNumeric)
                     {
                         _courseid = value;
@@ -98,14 +86,8 @@ namespace Lab202
         }
         public string Lecturer
         {
-            get
-            {
-                return _lecturer;
-            }
-            set
-            {
-                _lecturer = value;
-            }
+            get;
+            set;
         }
         public int MaxStudents
         {
