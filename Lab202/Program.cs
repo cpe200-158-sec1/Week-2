@@ -1,4 +1,5 @@
 using System;
+using Lab202;
 
 namespace Lab2
 {
@@ -18,10 +19,10 @@ namespace Lab2
 
 			/* playing with cpe200 object */
 			Console.WriteLine ("\n--- playing with cpe200 object ---");
-			cpe200.CourseID = "261200";
+			cpe200.CourseId = "261200";
 			Console.WriteLine (cpe200);
-			cpe200.CourseID = "2612OO";
-			cpe200.CourseID = "2612002";
+			cpe200.CourseId = "2612OO";
+			cpe200.CourseId = "2612002";
 
 			cpe200.NumStudents = 40;
 			Console.WriteLine (cpe200);
@@ -36,11 +37,12 @@ namespace Lab2
 			/* playing with cpe453 object */
 			Console.WriteLine ("\n--- playing with cpe453 object ---");
 			cpe453.Name = "Digital Image Processing";
-			cpe453.CourseID = "261453";
+			cpe453.CourseId = "261453";
 			cpe453.Lecturer = "Sansanee";
 			cpe453.MaxStudents = 20;
 			Console.WriteLine (cpe453);
 
+			Console.ReadKey();
 		}
 	}
 }
