@@ -21,12 +21,12 @@ namespace Lab2
             set
             {
                 bool chck = true;
-                foreach (char c in _CourseID)
+                foreach (char c in value)
                 {
                     if (!Char.IsDigit(c))
                         chck = false;
                 }
-                if (value.Length != 6 || chck == true) Console.WriteLine("{0}: error try setting invalid CourseID!", CourseID); else CourseID = value;
+                if (value.Length != 6 || chck == false) Console.WriteLine("{0}: error try setting invalid CourseID!", CourseID); else CourseID = value;
             }
         }
         public string _Lecturer
