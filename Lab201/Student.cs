@@ -70,7 +70,13 @@ namespace Lab201
             }
             set
             {
-                _StudentID = value;
+                if (value.Length != 5)
+                {
+                    Console.WriteLine(_StudentID + ": error try setting invalid StudentID!");
+                }
+
+                else
+                    _StudentID = value;
             }
 
         }
