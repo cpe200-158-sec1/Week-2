@@ -45,7 +45,7 @@ namespace Lab201
             {
                 if (value < 1950 || value > 2000)
                 {
-                    Console.WriteLine("57005: error try setting invalid year - of - birth value!");
+                    Console.WriteLine("{0}: error try setting invalid year - of - birth value!",StudentID);
                 }
                 else
                 {
@@ -70,7 +70,7 @@ namespace Lab201
             _name = "John Doe";
             _studentid = "UnKnow";
             _yearofbrith = 1995;
-            _isactive = true;
+            _isactive = false;
         }
 
      public Student(string name_in,string id_in)
