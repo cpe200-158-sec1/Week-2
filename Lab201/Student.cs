@@ -8,23 +8,34 @@ namespace Lab201
 {
     class Student
     {
+        //Fields = class variables
         private string _name;
         private string _studentid;
         private int _yearofbirth;
         private bool _isactive;
+
+        //ToString method = write details of the object
         public override string ToString()
         {
-            string s = "[Student: " + Name + " (" + StudentID + "), age=" + getAge() + ", ";
-            if (isActive)
+            //string s = "[Student: " + Name + " (" + StudentID + "), age=" + getAge() + ", ";
+            //if (isActive)
+            //{
+            //    s += "is active student]";
+            //}
+            //else
+            //{
+            //    s += "is NOT active student]";
+            //}
+            //return s;
+            string activation = " ";
+            if (!isActive)
             {
-                s += "is active student]";
+                activation = " NOT ";
             }
-            else
-            {
-                s += "is NOT active student]";
-            }
-            return s;
+            return string.Format("[Student: {0} ({1}), age={2}, is{3}active student]", Name, StudentID, getAge(), activation);
         }
+
+        //Constructors
         public Student()
         {
             Name = "John Doe";
@@ -53,16 +64,12 @@ namespace Lab201
             YearOfBirth = pYearOfBirth;
             isActive = pisActive;
         }
+
+        //Properties
         public string Name
         {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
+            get;
+            set;
         }
         public string StudentID
         {
@@ -102,14 +109,8 @@ namespace Lab201
         }
         public bool isActive
         {
-            get
-            {
-                return _isactive;
-            }
-            set
-            {
-                _isactive = value;
-            }
+            get;
+            set;
         }
         public int getAge()
         {
