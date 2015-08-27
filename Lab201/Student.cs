@@ -12,17 +12,18 @@ namespace Lab2
         private string _Name;
         private string _studentid;
         private int _year;
-        private bool _isActive=false;
+        private bool _isActive = false;
 
         public string name
         {
-            get{return _Name; }
-            set{_Name = value;}
+            get { return _Name; }
+            set { _Name = value; }
         }
         public string studentid
         {
-            get{ return _studentid;}
-            set{
+            get { return _studentid; }
+            set
+            {
                 if (value.Length > 0 || value.Length < 6)
                 {
                     _studentid = studentid;
@@ -44,9 +45,11 @@ namespace Lab2
                 {
                     Console.WriteLine("{0}: error try setting invalid year-of-birth value!");
                 }
+                else
+                {
 
-                
                     _year = value;
+                }
             }
         }
         public bool isActive
@@ -62,13 +65,7 @@ namespace Lab2
 
             }
         }
-        public int getage()
-        {
 
-            return 2015 -_year;
-
-
-        }
         public Student()
         {
             _Name = "Jonh Doe";
@@ -95,7 +92,7 @@ namespace Lab2
             _Name = name;
             _studentid = studentid;
             _year = year;
-            _isActive = true;
+            _isActive = isActive;
         }
         public override string ToString()
         {
@@ -112,10 +109,18 @@ namespace Lab2
 
             return s;
         }
+
+
+        public int getage()
+        {
+
+            return (2015 - _year);
+
+
+        }
+
     }
-
 }
-
 
 
 
