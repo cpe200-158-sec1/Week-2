@@ -12,36 +12,23 @@ namespace Lab2
         private string _Name;
         private string _studentid;
         private int _year;
-        private int _age;
-        private bool _isActive;
+        private bool _isActive=false;
 
         public string name
         {
-            get
-            {
-                return _Name;
-
-            }
-            set
-            {
-                _Name = name;
-
-            }
+            get{return _Name; }
+            set{_Name = value;}
         }
         public string studentid
         {
-            get
-            {
-                return _studentid;
-
-            }
-            set
-            {
+            get{ return _studentid;}
+            set{
                 if (value.Length > 0 || value.Length < 6)
                 {
-                    throw new OverflowException();
+                    _studentid = studentid;
                 }
-                _studentid = studentid;
+                else
+                    _studentid = value;
             }
         }
         public int year
@@ -53,10 +40,14 @@ namespace Lab2
             }
             set
             {
-                if (value >= 1950 || value < 2000)
+                if (value < 1950 || value > 2000)
                 {
-                    Console.WriteLine("{0}: error try setting invalid year-of-birth value!", _studentid);                }
+                    Console.WriteLine("{0}: error try setting invalid year-of-birth value!");
                 }
+
+                
+                    _year = value;
+            }
         }
         public bool isActive
         {
@@ -66,51 +57,57 @@ namespace Lab2
             }
             set
             {
-                isActive = value;
+
+                _isActive = value;
+
             }
         }
         public int getage()
         {
-            
-          return 2015-year;
-            
-          
-        }
-        public Student()
-        { 
-            _Name="Jonh Doe";
-            _age = 1995;
+
+            return 2015 -_year;
+
 
         }
-        public Student(string name,string studentid)
+        public Student()
+        {
+            _Name = "Jonh Doe";
+            _studentid = "(Unknown)";
+            _year = 1995;
+            _isActive = false;
+        }
+        public Student(string name, string studentid)
         {
             _Name = name;
             _studentid = studentid;
+            _year = 1995;
+            _isActive = true;
         }
-        public Student(string name, string studentid,int year)
+        public Student(string name, string studentid, int year)
         {
             _Name = name;
             _studentid = studentid;
             _year = year;
+            _isActive = true;
         }
-        public Student(string name, string studentid, int year,bool isActive)
+        public Student(string name, string studentid, int year, bool isActive)
         {
             _Name = name;
             _studentid = studentid;
             _year = year;
-            isActive = true;
+            _isActive = true;
         }
         public override string ToString()
         {
             string s = "[Student:" + name + "(" + studentid + "),age=" + getage() + ",";
 
-            if (isActive)
+            if (_isActive)
             {
                 s += "is active student]";
             }
             else
             {
-                s += "NoT active student]";
+                s += "is NoT active student]";
             }
 
             return s;
