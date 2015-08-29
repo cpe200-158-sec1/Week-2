@@ -82,7 +82,7 @@ namespace Lab201
         {
             int age;
             age = 2015 - _YearOfBirth;
-            return age;
+            return age ;
         }
 
         public override string ToString()
