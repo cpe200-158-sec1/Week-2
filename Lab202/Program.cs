@@ -5,6 +5,7 @@ namespace Lab2
 	class MainClass
 	{
 		public static void Main (string[] args)
+
 		{
 			/* Testing the Course class */
 			Course cpe200 = new Course ("Object-Oriented Programming", "261300");
