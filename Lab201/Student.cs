@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Lab2
 
 
+
 {
     public class Student
     {
