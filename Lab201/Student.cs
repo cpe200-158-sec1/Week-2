@@ -1,4 +1,5 @@
 ﻿using System;
+using Lab2;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,10 @@ namespace Lab201
 {
     class Student
     {
-        private string student;
         private string _name;
-        private int _studentID;
-        private int _age;
+        private string _studentID;
         private int _yob;
+        private bool _isActive;
         
         public string Name
         {
@@ -26,7 +26,7 @@ namespace Lab201
             }
         }
 
-        public int StudentID 
+        public string StudentID 
         {
             get
             {
@@ -38,33 +38,7 @@ namespace Lab201
             }
         }
 
-        public int Age
-        {
-            get
-            {
-                return _age;
-            }
-            set
-            {
-                if (1 < age || age > 100)
-                {
-
-                }
-                _age = value;
-            }
-        }
-
-        public string Student
-        {
-            get
-            {
-                _name = "John Doe";
-                _studentID = "(Unknown)";
-                _age = "20";          
-            }
-        }
-
-        public string YOB
+        public int YearOfBirth
         {
             get
             {
@@ -72,35 +46,68 @@ namespace Lab201
             }
             set
             {
-                if (2001 < yob || yob > 1949)
+                if (_yob >= 1995 && _yob <= 200)
                 {
-
+                    _yob = value;
                 }
-                _age = value;
+                else
+                { Console.WriteLine(_studentID + ": error try setting invalid year-of-birth value!"); }
+            }
+         }
+
+        public bool isActive
+        {
+            get
+            {
+                return _isActive;
+            }
+            set
+            {
+                _isActive = value;
+            }
+        }
 
 
+            public int Age()
+        {
+            int age;
+            age = 2015 - _yob;
+            return age;
+        }
 
-
+    public Student() {
+                _name = "John Doe";
+                _studentID = "Unknown";
+                _yob = 1995;
+                _isActive = false;
             }
 
+       public Student(string n1,string s1) {
+                _name = n1;
+                _studentID = s1;
+                _yob = 1995;
+                _isActive = true;    
+            }
 
+        public Student(string n2,string s2,int y1) {
+                _name = n2;
+                _studentID = s2;
+                _yob = y1;
+                _isActive = true;
+            }
 
+        public Student(string n3,string s3,int y2,bool a) {
+                _name = n3;
+                _studentID = s3;
+                _yob = y2;
+                _isActive = a;
+            }
 
-
-
-
-
-
-
-
-
-
-
-
+        public override string ToString()
+        {
+            return string.Format("[Student: {0} ({1}), age={2}, is {3}", _name, _studentID, Age(), (_isActive) ? " active student]" : " NOT active student]");
+        }
 
     }
-
-
-
 
 }
