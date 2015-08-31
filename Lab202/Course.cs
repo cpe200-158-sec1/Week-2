@@ -103,6 +103,6 @@ namespace Lab202
             string x = "[Course: " + Name + "(" + CourseID + "), Lecturer =" + Lecturer + ", has " + NumStudents + " students, max=" + MaxStudents + "]";
             return x;
         }
-
+        //comit
     }
 }
