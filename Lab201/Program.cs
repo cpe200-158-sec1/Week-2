@@ -1,4 +1,5 @@
 using System;
+using Lab201;
 
 namespace Lab2
 {
@@ -27,6 +28,7 @@ namespace Lab2
 			for (int i = 4; i < stds.Length; i++)
 				Console.WriteLine (stds [i]);
 
+            Console.ReadKey();
 		}
 	}
 }
