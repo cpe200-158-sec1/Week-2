@@ -2,58 +2,7 @@ using System;
 
 namespace Lab2
 {
-    class Student
-    {
-        private string _name;
-        private string _studentid;
-        private int _yearofbirth;
-        private bool _isactive;
 
-        public int YearOfBirth()
-        {
-            get{ return _yearofbirth; }
-            set {
-                if(value < 1950 || value > 2000)
-                {
-                    throw new OverflowException();
-                }
-            } 
-        }
-
-        private Student(string name,string studentid,int yearofbirth,bool isactive)
-        {
-            _name = name;
-            _studentid = studentid;
-            _yearofbirth = yearofbirth;
-            _isactive = isactive;
-        }
-
-        private Student(string name,string studentid)
-        {
-            Student(name, student,1995,false);
-
-        }
-
-        private Student(string name,string studentid,int yearofbirth)
-        {
-            Student(name, studentid, yearofbirth, false);
-        }
-
-       private Student()
-        {
-            Student("John Doe", "Unknow", 1995, false);
-        }
-
-        private int getAge()
-        {
-            return 2015 - _yearofbirth;
-        }
-
-        public override string ToString()
-        {
-            return string.Format("[Student: {0} ({1}), age={2}, is active student]",_name,_studentid,getAge(),);
-        }
-    }
 	class MainClass
 	{
         
@@ -76,13 +25,20 @@ namespace Lab2
 				Console.WriteLine (s);
 
 			Console.WriteLine ("\n--- Playing with s4, s5, s6 objects ---");
-			stds [4].Name = "Mario";
-			stds [5].YearOfBirth = 1900;
-			stds [6].isActive = false;
-			for (int i = 4; i < stds.Length; i++)
-				Console.WriteLine (stds [i]);
 
-		}
+
+			stds[4].name = "Mario";
+			stds[5]._YearOfBirth = 1900;
+			stds[6].isactive = false;
+
+            
+
+            for (int i = 4; i < stds.Length; i++)
+				Console.WriteLine (stds [i]);
+            Console.ReadKey();
+        }
+
+       
 	}
 
     
