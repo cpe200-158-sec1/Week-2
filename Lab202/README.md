@@ -38,5 +38,6 @@ The result should be similar to the output given as follows:
 261200: error try setting invalid Max No. Students!
 [Course: Object-Oriented Programming (261200), Lecturer=staff, has 40 students, max=40]
 
+
 --- playing with cpe453 object ---
 [Course: Digital Image Processing (261453), Lecturer=Sansanee, has 0 students, max=20]
